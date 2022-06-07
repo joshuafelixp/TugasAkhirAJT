@@ -8,17 +8,18 @@
 
 ## Membuat Instance EC2 AWS
 1. Masuk pada halaman aws console, lalu pilih Launch a virtual machine with EC2.
-2. Memilih AMI Ubuntu Server 22.04 LTS 64 bit.
-3. Memilih instance dengan tipe t2.medium.
-4. Pada Configure Instance Details gunakan konfigurasi default.
-5. Mengubah size menjadi 30 dan Volume Type General Purpose SSD (gp3).
-6. Memasukkan Tags dengan Key:Name dan Value:Tugas Akhir.
-7. Pilih Create new security group dan beri nama Mininet, kemudian buka protocol SSH, HTTP, HTTPS, TCP port 8080, TCP port 8081.
-8. Pilih Choose an existing key pair, dan piih vockey | RSA, kemudian centang I acknowledge dan klik Launch Instances.
-9. (Optional) Masuk pada halaman Elastic IPs untuk membuat IP statis agar IP EC2 tidak berubah.
-10. (Optional) Klik Allocate Elastic Ip address, dan isikan seperti di bawah.
-11. (Optional) Pilih Elastic Ip address yang telah dibuat kemudian klik Actions, Associate Elastic Ip address.
-12. (Optional) Pilih Instance Tugas Akhir, kemudian klik Associate.
+![tes](dokumentasi/1.png)
+3. Memilih AMI Ubuntu Server 22.04 LTS 64 bit.
+4. Memilih instance dengan tipe t2.medium.
+5. Pada Configure Instance Details gunakan konfigurasi default.
+6. Mengubah size menjadi 30 dan Volume Type General Purpose SSD (gp3).
+7. Memasukkan Tags dengan Key:Name dan Value:Tugas Akhir.
+8. Pilih Create new security group dan beri nama Mininet, kemudian buka protocol SSH, HTTP, HTTPS, TCP port 8080, TCP port 8081.
+9. Pilih Choose an existing key pair, dan piih vockey | RSA, kemudian centang I acknowledge dan klik Launch Instances.
+10. (Optional) Masuk pada halaman Elastic IPs untuk membuat IP statis agar IP EC2 tidak berubah.
+11. (Optional) Klik Allocate Elastic Ip address, dan isikan seperti di bawah.
+12. (Optional) Pilih Elastic Ip address yang telah dibuat kemudian klik Actions, Associate Elastic Ip address.
+13. (Optional) Pilih Instance Tugas Akhir, kemudian klik Associate.
 
 ## Instalasi Mininet, Ryu Controller, dan Flow Manager pada Instance EC2
 1. Masuk pada Instance menggunakan perintah ssh -i .ssh/labsuser.pem ubuntu@IP
