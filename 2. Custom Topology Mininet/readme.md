@@ -155,7 +155,7 @@ topos = { 'mytopo': ( lambda: MyTopo() ) }
 ```sh
 sudo mn --controller=none --custom custom_topo.py --topo mytopo --mac --arp
 ```
-4. Membuat alur flow agar agar setiap host dapat saling terkoneksi satu
+4. Membuat alur flow agar setiap host dapat saling terkoneksi satu
 sama lain.
 ```sh
 sh ovs-ofctl add-flow s1 -O OpenFlow13 "in_port=1,action=output:2,3"
