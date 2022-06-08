@@ -163,11 +163,3 @@ mininet> pingall
 ```sh
 mininet> h1 ping -c2 h3
 ```
-## Tolology Mininet Loop Dengan 3 switch dan 6 host (Ryu Controller)
-1. (Optional) Lakukan instalasi `tmux` agar dapat menjalankan dua terminal bersamaan.
-```sh
-sudo apt install tmux
-```
-2. (Optional) Jalankan tmux dan buka terminal kedua.
-
-3.  
