@@ -171,6 +171,9 @@ sh ovs-ofctl add-flow s3 -O OpenFlow13 "in_port=2,action=output:1,3,4"
 sh ovs-ofctl add-flow s3 -O OpenFlow13 "in_port=3,action=output:1,2"
 sh ovs-ofctl add-flow s3 -O OpenFlow13 "in_port=4,action=output:1,2"
 ```
+
+> Note: output port dari switch ke switch lain tidak perlu dibuka agar tidak terjadi packet duplicate. 
+
 ![dokumentasi](Dokumentasi/9.png)
 
 5. Mengecek apakah setiap host sudah saling terkoneksi menggunakan perintah
