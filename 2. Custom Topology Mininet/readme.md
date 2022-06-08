@@ -1,5 +1,7 @@
 # Membuat Custom Topology pada Mininet
 ## Topology Mininet Dengan 2 Host dan 2 Switch
+![dokumentasi](Dokumentasi/1.png)
+
 1. Masuk pada instance EC2 yang telah terinstall Mininet.
 ```sh
 ssh -i .ssh/labsuser.pem ubuntu@ip_instance
@@ -51,10 +53,14 @@ class MyTopo( Topo ):
 
 topos = { 'mytopo': ( lambda: MyTopo() ) }
 ```
+![dokumentasi](Dokumentasi/2.png)
+
 3. Menjalankan mininet tanpa controller menggunakan custom topology yang telah dibuat.
 ```sh
 sudo mn --controller=none --custom custom_topo_2sw2h.py --topo mytopo --mac --arp
 ```
+![dokumentasi](Dokumentasi/3.png)
+
 4. Membuat alur flow agar h1 dapat terhubung dengan h2.
 ```sh
 mininet> sh ovs-ofctl add-flow s1 -O OpenFlow13 "in_port=1,action=output:2"
@@ -62,16 +68,25 @@ mininet> sh ovs-ofctl add-flow s1 -O OpenFlow13 "in_port=2,action=output:1"
 mininet> sh ovs-ofctl add-flow s2 -O OpenFlow13 "in_port=1,action=output:2"
 mininet> sh ovs-ofctl add-flow s2 -O OpenFlow13 "in_port=2,action=output:1"
 ```
+![dokumentasi](Dokumentasi/4.png)
+
 5. Mengecek apakah setiap host sudah saling terkoneksi menggunakan perintah
 `pinggall` pada console mininet.
 ```sh
 mininet> pingall
 ```
+![dokumentasi](Dokumentasi/5.png)
+
 6. Menguji koneksi h1 dengan h2.
 ```sh
 mininet> h1 ping -c2 h2
 ```
+![dokumentasi](Dokumentasi/6.png)
+
+
 ## Tolology Mininet Loop Dengan 3 switch dan 6 host (Manual Flow)
+![dokumentasi](Dokumentasi/7.png)
+
 1. Masuk pada instance EC2 yang telah terinstall Mininet.
 ```sh
 ssh -i .ssh/labsuser.pem ubuntu@ip_instance
@@ -134,6 +149,8 @@ class MyTopo( Topo ):
 
 topos = { 'mytopo': ( lambda: MyTopo() ) }
 ```
+![dokumentasi](Dokumentasi/8.png)
+
 3. Menjalankan mininet tanpa controller menggunakan custom topology yang telah dibuat.
 ```sh
 sudo mn --controller=none --custom custom_topo.py --topo mytopo --mac --arp
@@ -154,12 +171,17 @@ sh ovs-ofctl add-flow s3 -O OpenFlow13 "in_port=2,action=output:1,3,4"
 sh ovs-ofctl add-flow s3 -O OpenFlow13 "in_port=3,action=output:1,2"
 sh ovs-ofctl add-flow s3 -O OpenFlow13 "in_port=4,action=output:1,2"
 ```
+![dokumentasi](Dokumentasi/9.png)
+
 5. Mengecek apakah setiap host sudah saling terkoneksi menggunakan perintah
 `pinggall` pada console mininet.
 ```sh
 mininet> pingall
 ```
+![dokumentasi](Dokumentasi/10.png)
+
 6. Menguji koneksi h1 dengan h3.
 ```sh
 mininet> h1 ping -c2 h3
 ```
+![dokumentasi](Dokumentasi/11.png)
