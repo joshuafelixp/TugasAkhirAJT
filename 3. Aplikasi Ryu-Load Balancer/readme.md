@@ -348,11 +348,11 @@ sudo python3 topo_lb.py
 ```sh
 ryu-manager rr_lb.py
 ```
-7. Melakukan percobaan dengan curl.
+7. Melakukan percobaan dengan `curl`.
 ```sh
 mininet> h1 curl 10.0.0.100
 ```
-8. Melakukan percobaan dengan dump.
+8. Melakukan percobaan dengan `dump-flow`.
 ```sh
 mininet> dpctl dump-flows -O OpenFlow13
 ```
