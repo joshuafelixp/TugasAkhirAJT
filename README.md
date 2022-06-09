@@ -1,4 +1,4 @@
-# TugasAkhirAJT
+# Tugas Akhir AJT
 **Tugas Akhir Mata Kuliah Arsitektur Jaringan Terkini**
 1. Instalasi Mininet pada Instance EC2 AWS
 2. Membuat Custom Topology Mininet
