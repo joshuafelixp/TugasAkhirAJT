@@ -343,3 +343,7 @@ sudo python3 topo-spf_lab.py
 ```sh
 ryu-manager dijkstra_Ryu_controller.py
 ```
+7. Melakukan percobaan dengan `dump-flow`.
+```sh
+mininet> dpctl dump-flows -O OpenFlow13
+```
